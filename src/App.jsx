@@ -7,6 +7,7 @@ import Home from './Componets/Home/Home.jsx'
 import About from './Componets/About/About.jsx'
 import Portfolio from './Componets/Portfolio/Portfolio.jsx'
 import Notfound from './Componets/Notfound/Notfound.jsx'
+import { useEffect } from 'react'
 
 
 function App() {
@@ -19,6 +20,12 @@ function App() {
       {path:"*" ,element:<Notfound/>}
     ]
   }])
+
+  useEffect(() => {
+    document.title="Start Freamwork"
+  
+  }, [])
+  
   return (
     <>
       <RouterProvider router={routes}></RouterProvider>
